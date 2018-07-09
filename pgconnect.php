@@ -1,5 +1,5 @@
 <?php 
-$link = pg_connect("host=localhost port=5432 dbname=postgres user=postgres password=123456");
+$link = pg_connect("host=ec2-184-73-174-171.compute-1.amazonaws.com port=5432 dbname=dd0vscf6vmmsuj user=xercyudnluuomg password=71e72059e3297be42a8a0b61b3c9afc6fdf0a711c365b3f31f08949a515b4a55");
 if($link){
 	print "Database connected...<br/>";
 }else{
