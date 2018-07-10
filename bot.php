@@ -1,6 +1,6 @@
 <?php
 
-$link = pg_connect("host=localhost port=5432 dbname=emaeng_postgres user=emaeng password=025830491037-9");
+$link = pg_connect("host=ec2-184-73-174-171.compute-1.amazonaws.com port=5432 dbname=dd0vscf6vmmsuj user=xercyudnluuomg password=71e72059e3297be42a8a0b61b3c9afc6fdf0a711c365b3f31f08949a515b4a55");
 if($link){
 	echo "Database connected...<br/>";
 }else{
@@ -120,7 +120,7 @@ if(! is_null($events)){
                     $replyData = new ImageMessageBuilder($picFullSize,$picThumbnail);
                 break;
                 case "s1":
-                $conn = pg_connect("host=localhost port=5432 dbname=emaeng_postgres user=emaeng password=025830491037-9"); 
+                $conn = pg_connect("host=ec2-184-73-174-171.compute-1.amazonaws.com port=5432 dbname=dd0vscf6vmmsuj user=xercyudnluuomg password=71e72059e3297be42a8a0b61b3c9afc6fdf0a711c365b3f31f08949a515b4a55"); 
                 $result = pg_query($conn, "SELECT brand,gen,type FROM car"); 
                 $outp = ""; 
                 while($rs = pg_fetch_array($result)) { 
@@ -137,7 +137,7 @@ if(! is_null($events)){
                     mysqli_close($link);
                 break;
                 case "brand":
-                $conn = pg_connect("host=localhost port=5432 dbname=emaeng_postgres user=emaeng password=025830491037-9"); 
+                $conn = pg_connect("host=ec2-184-73-174-171.compute-1.amazonaws.com port=5432 dbname=dd0vscf6vmmsuj user=xercyudnluuomg password=71e72059e3297be42a8a0b61b3c9afc6fdf0a711c365b3f31f08949a515b4a55");
                 $result = pg_query($conn, "SELECT brand FROM car"); 
                     $outp = ""; 
                 while($rs = pg_fetch_array($result)) { 
@@ -153,7 +153,7 @@ if(! is_null($events)){
                     mysqli_close($link);
                 break;
                 case "gen":
-                $conn = pg_connect("host=localhost port=5432 dbname=emaeng_postgres user=emaeng password=025830491037-9"); 
+                $conn = pg_connect("host=ec2-184-73-174-171.compute-1.amazonaws.com port=5432 dbname=dd0vscf6vmmsuj user=xercyudnluuomg password=71e72059e3297be42a8a0b61b3c9afc6fdf0a711c365b3f31f08949a515b4a55"); 
                 $result = pg_query($conn, "SELECT gen FROM car"); 
                 $outp = ""; 
                 while($rs = pg_fetch_array($result)) { 
@@ -169,7 +169,7 @@ if(! is_null($events)){
                     mysqli_close($link);
                 break;
                 case "ประเภท":
-                $conn = pg_connect("host=localhost port=5432 dbname=emaeng_postgres user=emaeng password=025830491037-9"); 
+                $conn = pg_connect("host=ec2-184-73-174-171.compute-1.amazonaws.com port=5432 dbname=dd0vscf6vmmsuj user=xercyudnluuomg password=71e72059e3297be42a8a0b61b3c9afc6fdf0a711c365b3f31f08949a515b4a55"); 
                 $result = pg_query($conn, "SELECT type FROM car"); 
                 $outp = ""; 
                 while($rs = pg_fetch_array($result)) { 
@@ -185,7 +185,7 @@ if(! is_null($events)){
                     
                 break;
                 case "mapnumber1":
-                $conn = pg_connect("host=localhost port=5432 dbname=emaeng_postgres user=emaeng password=025830491037-9"); 
+                $conn = pg_connect("host=ec2-184-73-174-171.compute-1.amazonaws.com port=5432 dbname=dd0vscf6vmmsuj user=xercyudnluuomg password=71e72059e3297be42a8a0b61b3c9afc6fdf0a711c365b3f31f08949a515b4a55");
                 $result = pg_query($conn, "SELECT lat,lng FROM locat WHERE loc_id ='1'");
                 
                 while ($row = pg_fetch_assoc($result)) {
@@ -204,7 +204,7 @@ if(! is_null($events)){
                 
                 break;
                 case "mapnumber2":
-                $conn = pg_connect("host=localhost port=5432 dbname=emaeng_postgres user=emaeng password=025830491037-9"); 
+                $conn = pg_connect("host=ec2-184-73-174-171.compute-1.amazonaws.com port=5432 dbname=dd0vscf6vmmsuj user=xercyudnluuomg password=71e72059e3297be42a8a0b61b3c9afc6fdf0a711c365b3f31f08949a515b4a55");
                 $result = pg_query($conn, "SELECT lat,lng FROM locat WHERE loc_id ='2'");
                 
                 while ($row = pg_fetch_assoc($result)) {
@@ -223,7 +223,7 @@ if(! is_null($events)){
                 
                 break;
                 case "mapnumber3":
-                $conn = pg_connect("host=localhost port=5432 dbname=emaeng_postgres user=emaeng password=025830491037-9"); 
+                $conn = pg_connect("host=ec2-184-73-174-171.compute-1.amazonaws.com port=5432 dbname=dd0vscf6vmmsuj user=xercyudnluuomg password=71e72059e3297be42a8a0b61b3c9afc6fdf0a711c365b3f31f08949a515b4a55");
                 $result = pg_query($conn, "SELECT lat,lng FROM locat WHERE loc_id ='3'");
                 
                 while ($row = pg_fetch_assoc($result)) {
@@ -242,7 +242,7 @@ if(! is_null($events)){
                 
                 break;
                 case "mapnumber4":
-                $conn = pg_connect("host=localhost port=5432 dbname=emaeng_postgres user=emaeng password=025830491037-9"); 
+                $conn = pg_connect("host=ec2-184-73-174-171.compute-1.amazonaws.com port=5432 dbname=dd0vscf6vmmsuj user=xercyudnluuomg password=71e72059e3297be42a8a0b61b3c9afc6fdf0a711c365b3f31f08949a515b4a55"); 
                 $result = pg_query($conn, "SELECT lat,lng FROM locat WHERE loc_id ='4'");
                 
                 while ($row = pg_fetch_assoc($result)) {
@@ -261,7 +261,7 @@ if(! is_null($events)){
                 
                 break;
                 case "mapnumber5":
-                $conn = pg_connect("host=localhost port=5432 dbname=emaeng_postgres user=emaeng password=025830491037-9"); 
+                $conn = pg_connect("host=ec2-184-73-174-171.compute-1.amazonaws.com port=5432 dbname=dd0vscf6vmmsuj user=xercyudnluuomg password=71e72059e3297be42a8a0b61b3c9afc6fdf0a711c365b3f31f08949a515b4a55"); 
                 $result = pg_query($conn, "SELECT lat,lng FROM locat WHERE loc_id ='5'");
                 
                 while ($row = pg_fetch_assoc($result)) {
@@ -280,7 +280,7 @@ if(! is_null($events)){
                 
                 break;
                 case "mapnumber6":
-                $conn = pg_connect("host=localhost port=5432 dbname=emaeng_postgres user=emaeng password=025830491037-9"); 
+                $conn = pg_connect("host=ec2-184-73-174-171.compute-1.amazonaws.com port=5432 dbname=dd0vscf6vmmsuj user=xercyudnluuomg password=71e72059e3297be42a8a0b61b3c9afc6fdf0a711c365b3f31f08949a515b4a55");
                 $result = pg_query($conn, "SELECT lat,lng FROM locat WHERE loc_id ='6'");
                 
                 while ($row = pg_fetch_assoc($result)) {
@@ -357,13 +357,13 @@ if(! is_null($events)){
                                 new CarouselColumnTemplateBuilder(
                                     '1.รถคุณสุชาติ',
                                     'ทะเบียนรถ เช่น ฆช 8063 กทม.',
-                                    'https://emaeng.000webhostapp.com/images/1-31.jpg',
+                                    'https://emaeng-bot.herokuapp.com/1-31.jpg',
                                     $actionBuilder
                                 ),
                                 new CarouselColumnTemplateBuilder(
                                     '2.รถคุณสุชาติ',
                                     'ทะเบียนรถ เช่น ฆช 8063 กทม.',
-                                    'https://emaeng.000webhostapp.com/images/1-31.jpg',
+                                    'https://emaeng-bot.herokuapp.com/1-31.jpg',
                                     $actionBuilder1
                                 ),
                                 new CarouselColumnTemplateBuilder(
