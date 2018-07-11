@@ -14,7 +14,7 @@ if ($Mail == " ") {
 	echo 'Not Inserted'; 
 }else{
 
-$result = pg_query($link,"INSERT INTO  users(mail,userId) VALUES ('$Mail','$dataUser')");
+$result = pg_query($link, "INSERT INTO  u_user(code,mail) VALUES ('$dataUser','$Mail')");
 	if(!$result){
 		echo 'Not Inserted';
 	}else{

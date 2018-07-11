@@ -28,6 +28,7 @@ $LineLogin = new LineLoginLib(
     $userInfo = $LineLogin->userProfile($accToken,true);
     if(!is_null($userInfo) && is_array($userInfo) && array_key_exists('userId',$userInfo)){
         $rs = $userInfo["userId"];
+        
     }
     
 
