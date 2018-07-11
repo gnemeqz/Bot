@@ -3,7 +3,7 @@ $link = pg_connect("host=ec2-184-73-174-171.compute-1.amazonaws.com port=5432 db
 if($link){
 	echo "Database connected...<br/>";
 }else{
-	echo "Database is not connect...".pg_last_error($link)."<br/>";
+	echo "Database is not connect...".pg_last_error()."<br/>";
 }
 
 $Mail = $_POST['c_mail'];
@@ -14,8 +14,8 @@ if ($Mail == " ") {
 	echo 'Not Inserted'; 
 }else{
 
-$sql = "INSERT INTO  users(mail,userId) VALUES ('$Mail','$dataUser')";
-	if(!pg_query($link,$sql)){
+$result = pg_query($link,"INSERT INTO  users(mail,userId) VALUES ('$Mail','$dataUser')");
+	if(!$result){
 		echo 'Not Inserted';
 	}else{
 		echo 'Inserted';
