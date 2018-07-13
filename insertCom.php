@@ -1,5 +1,5 @@
 <?php 
-$link = pg_connect("host=ec2-184-73-174-171.compute-1.amazonaws.com port=5432 dbname=dd0vscf6vmmsuj user=xercyudnluuomg password=71e72059e3297be42a8a0b61b3c9afc6fdf0a711c365b3f31f08949a515b4a55");
+$link  = pg_connect("host=122.155.169.49 port=27388 dbname=portman user=operator password=operator^1999");
 if($link){
 	echo "Database connected...<br/>";
 }else{
@@ -14,7 +14,7 @@ if ($Mail == " ") {
 	echo 'Not Inserted'; 
 }else{
 
-$result = pg_query($link, "INSERT INTO  u_user(code,mail) VALUES ('$dataUser','$Mail')");
+$result = pg_query($link, "INSERT INTO  php_user(code,mail) VALUES ('$dataUser','$Mail')");
 	if(!$result){
 		echo 'Not Inserted';
 	}else{
