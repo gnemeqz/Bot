@@ -1,5 +1,5 @@
 <?php 
-$link = pg_connect("host=ec2-184-73-174-171.compute-1.amazonaws.com port=5432 dbname=dd0vscf6vmmsuj user=xercyudnluuomg password=71e72059e3297be42a8a0b61b3c9afc6fdf0a711c365b3f31f08949a515b4a55");
+$link = pg_connect("host=122.155.169.49 port=27388 dbname=portman user=operator password=operator^1999");
 if($link){
 	print "Database connected...<br/>";
 }else{
@@ -20,7 +20,7 @@ if($link){
 //         pg_free_result($res);
 //         pg_close($link);
 
-$result = pg_query($link, "SELECT * FROM car");
+$result = pg_query($link, "SELECT * FROM php_car");
 if (!$result) {
   echo "An error occurred.\n";
   exit;
@@ -29,7 +29,7 @@ if (!$result) {
 while ($row = pg_fetch_assoc($result)) {
   echo $row['brand'].' - ';
   echo $row['gen'] .' - ' ;
-  echo $row['type'].' | ';
+  echo $row['type_car'].' | ';
 
 }
  
