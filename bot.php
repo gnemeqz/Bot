@@ -170,11 +170,11 @@ if(! is_null($events)){
                 break;
                 case "ประเภท":
                 $conn = pg_connect("host=122.155.169.49 port=27388 dbname=portman user=operator password=operator^1999");
-                $result = pg_query($conn, "SELECT type FROM php_car"); 
+                $result = pg_query($conn, "SELECT type_car FROM php_car"); 
                 $outp = ""; 
                 while($rs = pg_fetch_array($result)) { 
                     if ($outp != "[") {$outp .= " ";}
-                        $outp .= 'ประเภทรถ :'.  $rs["type"] . '  '; } 
+                        $outp .= 'ประเภทรถ :'.  $rs["type_car"] . '  '; } 
                         $outp .=""; 
                     echo($outp); 
                     pg_close($conn);
