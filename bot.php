@@ -6,7 +6,7 @@ if($link){
 }else{
 	print pg_last_error($link);
 }
-$result = pg_query($link, "SELECT * FROM locat WHERE loc_id = 3");
+$result = pg_query($link, "SELECT * FROM php_locat WHERE loc_id = 3");
 if (!$result) {
     echo "An error occurred.\n";
     exit;
@@ -121,13 +121,13 @@ if(! is_null($events)){
                 break;
                 case "s1":
                 $conn = pg_connect("host=122.155.169.49 port=27388 dbname=portman user=operator password=operator^1999"); 
-                $result = pg_query($conn, "SELECT brand,gen,type FROM php_car"); 
+                $result = pg_query($conn, "SELECT brand,gen,type_car FROM php_car"); 
                 $outp = ""; 
                 while($rs = pg_fetch_array($result)) { 
                     if ($outp != "[") {$outp .= " ";} 
                         $outp .= 'ยี่ห้อรถ :' . $rs["brand"] . ','; 
                         $outp .= 'รุ่นของรถ :' . $rs["gen"] . ','; 
-                        $outp .= 'ประเภทรถ :'.  $rs["type"] . '  '; } 
+                        $outp .= 'ประเภทรถ :'.  $rs["type_car"] . '  '; } 
                         $outp .=""; 
                     echo($outp); 
                     pg_close($conn);
