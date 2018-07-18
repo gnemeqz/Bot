@@ -134,7 +134,7 @@ if(! is_null($events)){
 
                     $textReplyMessage = "ค่าที่ได้";
                     $replyData = new TextMessageBuilder($textReplyMessage,$outp);
-                    mysqli_close($link);
+                    
                 break;
                 case "brand":
                 $conn = pg_connect("host=122.155.169.49 port=27388 dbname=portman user=operator password=operator^1999");
@@ -146,11 +146,11 @@ if(! is_null($events)){
                         $outp .=""; 
 
                     echo($outp); 
-
-                    $dbdata = json_encode($outp);
+                    pg_close($conn);
+                
                     $textReplyMessage = "ค่าที่ได้";
                     $replyData = new TextMessageBuilder($textReplyMessage,$outp);
-                    mysqli_close($link);
+
                 break;
                 case "gen":
                 $conn = pg_connect("host=122.155.169.49 port=27388 dbname=portman user=operator password=operator^1999"); 
@@ -166,7 +166,7 @@ if(! is_null($events)){
                    
                     $textReplyMessage = "ค่าที่ได้";
                     $replyData = new TextMessageBuilder($textReplyMessage,$outp);
-                    mysqli_close($link);
+
                 break;
                 case "ประเภท":
                 $conn = pg_connect("host=122.155.169.49 port=27388 dbname=portman user=operator password=operator^1999");
@@ -306,7 +306,7 @@ if(! is_null($events)){
                 $longitude = 100.61141967773438;
                 $replyData = new LocationMessageBuilder($placeName, $placeAddress, $latitude ,$longitude); 
                 break;
-                case 'temp':
+                case "temp":
                     $actionBuilder = array (
                         new  MessageTemplateActionBuilder (
                             'เลือก',
