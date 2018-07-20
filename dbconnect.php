@@ -1,23 +1,11 @@
 <?php 
-$link = mysqli_connect("localhost","root","emaenggg","cartemp");
+$link = pg_connect("host=122.155.169.49 port=27388 dbname=portman user=operator password=operator^1999");
 if($link){
 	echo "Database connected...<br/>";
 }else{
-	echo "Database is not connect...".mysqli_error()."<br/>";
+	print pg_last_error($link);
 }
 
-$sql = "SELECT * FROM  carlist";
-$res = mysqli_query($link, $sql);
-    while($obj = ($res)){
-         $obj->id.  "   ,  ";
-         $obj->brand."  ,  ";
-         $obj->gen."  ,  ";
-         $obj->type."    ";echo "<br/>";
 
-        $myText = json_decode($obj);
-        echo $myText;
-    }
-        mysqli_free_result($res);
-        mysqli_close($link);
 
 ?>
