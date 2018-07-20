@@ -5,7 +5,8 @@ if($link){
 }else{
 	print pg_last_error($link);
 }
-
+$sqlChk = pg_query($link, "SELECT id FROM php_car"); 
+echo $sqlChk;
 
 
 ?>
